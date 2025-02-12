@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  nodeapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    environment:
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=root
+      - DB_NAME=bookstore
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3000/api/books || exit 1"]
+      interval: 10s
+      timeout: 15s
+      retries: 10
+      start_period: 30s  
+    depends_on:
+      mysql:
+        condition: service_healthy
+    networks:
+      bookstore-network:
+        aliases:
+          - nodeapp
+
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bookstore
+    volumes:
+      - mysql-data:/var/lib/mysql
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 5s
+      timeout: 10s
+      retries: 5
+    networks:
+      - bookstore-network
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend/public:/usr/share/nginx/html:ro
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - nodeapp
+    networks:
+      - bookstore-network
+
+volumes:
+  mysql-data:
+
+networks:
+  bookstore-network:
+    driver: bridge
