@@ -31,16 +31,16 @@ CREATE TABLE IF NOT EXISTS book_tags (
 -- Sample datas
 -- Books
 INSERT INTO books (title, seller, description, image, price, discounted_price) VALUES
-('The Great Gatsby', 'ClassicBooks Co.', 'A story of the Jazz Age', 'placehold.jpg', 24.99, 19.99),
-('Python for Beginners', 'TechBooks Ltd', 'Learn Python programming', 'placehold.jpg', 39.99, NULL),
-('Master Chef Recipes', 'Foodie Publications', 'Culinary delights for home chefs', 'placehold.jpg', 29.99, 24.99),
-('The Hobbit', 'Fantasy Books Inc', 'Epic fantasy adventure', 'placehold.jpg', 29.99, 24.99),
-('The Martian', 'Sci-Fi Books Co', 'Survival story on Mars', 'placehold.jpg', 27.95, NULL),
-('Becoming', 'Memoir Press', 'Michelle Obama autobiography', 'placehold.jpg', 35.00, 29.99),
-('Atomic Habits', 'SelfHelp Publications', 'Build good habits framework', 'placehold.jpg', 28.50, NULL),
-('The Da Vinci Code', 'Mystery House', 'Religious conspiracy thriller', 'placehold.jpg', 19.99, 15.99),
-('1984', 'ClassicBooks Co', 'Dystopian political novel', 'placehold.jpg', 22.50, 18.75),
-('The Lean Startup', 'Business Books Ltd', 'Entrepreneurship methodology', 'placehold.jpg', 34.99, 29.99);
+('The Great Gatsby', 'ClassicBooks Co.', 'A story of the Jazz Age', '1.jpg', 24.99, 19.99),
+('Python for Beginners', 'TechBooks Ltd', 'Learn Python programming', '2.jpg', 39.99, NULL),
+('Master Chef Recipes', 'Foodie Publications', 'Culinary delights for home chefs', '3.jpg', 29.99, 24.99),
+('The Hobbit', 'Fantasy Books Inc', 'Epic fantasy adventure', '4.png', 29.99, 24.99),
+('The Martian', 'Sci-Fi Books Co', 'Survival story on Mars', '5.jpg', 27.95, NULL),
+('Becoming', 'Memoir Press', 'Michelle Obama autobiography', '6.jpg', 35.00, 29.99),
+('Atomic Habits', 'SelfHelp Publications', 'Build good habits framework', '7.jpg', 28.50, NULL),
+('The Da Vinci Code', 'Mystery House', 'Religious conspiracy thriller', '8.jpg', 19.99, 15.99),
+('1984', 'ClassicBooks Co', 'Dystopian political novel', '9.jpg', 22.50, 18.75),
+('The Lean Startup', 'Business Books Ltd', 'Entrepreneurship methodology', '10.jpg', 34.99, 29.99);
 
 
 -- Tags

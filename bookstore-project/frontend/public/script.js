@@ -28,17 +28,21 @@ function displayBooks(books) {
     books.forEach(book => {
         $('#books').append(`
             <div class="book-card">
-                <h3>${book.title}</h3>
-                <p>Seller: ${book.seller || 'Unknown'}</p>
-                ${book.description ? `<p>${book.description}</p>` : ''}
-                <p>Price: $${book.price} ${book.discounted_price ? 
-                    `<del>$${book.discounted_price}</del>` : ''}</p>
-                <div class="tags">Tags: ${book.tags?.join(', ') || 'None'}</div>
-                <button onclick="deleteBook(${book.id})">Delete</button>
+                <img src="${book.image}" alt="${book.title} image" class="book-image">
+                <div class="book-card-content">
+                    <h3>${book.title}</h3>
+                    <p>Seller: ${book.seller || 'Unknown'}</p>
+                    ${book.description ? `<p>${book.description}</p>` : ''}
+                    <p>Price: $${book.price} ${book.discounted_price ? 
+                        `<del>$${book.discounted_price}</del>` : ''}</p>
+                    <div class="tags">Tags: ${book.tags?.join(', ') || 'None'}</div>
+                    <button onclick="deleteBook(${book.id})">Delete</button>
+                </div>
             </div>
         `);
     });
 }
+
 
 async function addBook() {
     const bookData = {
@@ -57,7 +61,6 @@ async function addBook() {
             data: JSON.stringify(bookData)
         });
         fetchBooks();
-        $('#book-form')[0].reset();
     } catch (err) {
         console.error('Error adding book:', err);
     }
