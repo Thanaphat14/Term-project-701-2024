@@ -98,3 +98,16 @@ h1 { color: #000000; }
 }
 .page-number:hover { background: #000; color: #fff; }
 .page-number.active { background: #ffd700; color: #000000; text-decoration: underline; }
+
+/* Carousel */
+.carousel-control-prev, .carousel-control-next {
+  width: 40px; height: 40px; background-color: #FFD700;
+  border-radius: 50%; opacity: 1; display: flex;
+  align-items: center; justify-content: center;
+  position: absolute; top: 50%; transform: translateY(-50%);
+  z-index: 10;
+}
+.carousel-control-prev { left: 20px; }
+.carousel-control-next { right: 20px; }
+.carousel-control-prev-icon, .carousel-control-next-icon { filter: invert(0%) brightness(0%); }
+.product-price { color: #ff4500; }
