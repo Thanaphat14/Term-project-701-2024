@@ -8,25 +8,25 @@ const productsPerPage = 12;
 
 let products = [
   { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 01", price: "฿129" },
-  { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 02", price: "฿139" },
-  { image: "/User Interface/Ex.image/Ex3.png", title: "Infinity Heroes Volume 03", price: "฿149" },
-  { image: "/User Interface/Ex.image/Ex4.png", title: "Infinity Heroes Volume 04", price: "฿159" },
-  { image: "/User Interface/Ex.image/Ex5.png", title: "Infinity Heroes Volume 05", price: "฿169" },
-  { image: "/User Interface/Ex.image/Ex6.png", title: "Infinity Heroes Volume 06", price: "฿179" },
-  { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 07", price: "฿189" },
-  { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 08", price: "฿199" },
-  { image: "/User Interface/Ex.image/Ex3.png", title: "Infinity Heroes Volume 09", price: "฿209" },
-  { image: "/User Interface/Ex.image/Ex4.png", title: "Infinity Heroes Volume 10", price: "฿219" },
-  { image: "/User Interface/Ex.image/Ex5.png", title: "Infinity Heroes Volume 11", price: "฿229" },
-  { image: "/User Interface/Ex.image/Ex6.png", title: "Infinity Heroes Volume 12", price: "฿239" },
-  { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 13", price: "฿129" },
-  { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 14", price: "฿139" },
-  { image: "/User Interface/Ex.image/Ex3.png", title: "Infinity Heroes Volume 15", price: "฿149" },
-  { image: "/User Interface/Ex.image/Ex4.png", title: "Infinity Heroes Volume 16", price: "฿159" },
-  { image: "/User Interface/Ex.image/Ex5.png", title: "Infinity Heroes Volume 17", price: "฿169" },
-  { image: "/User Interface/Ex.image/Ex6.png", title: "Infinity Heroes Volume 18", price: "฿179" },
-  { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 19", price: "฿189" },
-  { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 20", price: "฿199" },
+            { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 02", price: "฿139" },
+            { image: "/User Interface/Ex.image/Ex3.png", title: "Infinity Heroes Volume 03", price: "฿149" },
+            { image: "/User Interface/Ex.image/Ex4.png", title: "Infinity Heroes Volume 04", price: "฿159" },
+            { image: "/User Interface/Ex.image/Ex5.png", title: "Infinity Heroes Volume 05", price: "฿169" },
+            { image: "/User Interface/Ex.image/Ex6.png", title: "Infinity Heroes Volume 06", price: "฿179" },
+            { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 07", price: "฿189" },
+            { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 08", price: "฿199" },
+            { image: "/User Interface/Ex.image/Ex3.png", title: "Infinity Heroes Volume 09", price: "฿209" },
+            { image: "/User Interface/Ex.image/Ex4.png", title: "Infinity Heroes Volume 10", price: "฿219" },
+            { image: "/User Interface/Ex.image/Ex5.png", title: "Infinity Heroes Volume 11", price: "฿229" },
+            { image: "/User Interface/Ex.image/Ex6.png", title: "Infinity Heroes Volume 12", price: "฿239" },
+            { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 13", price: "฿129" },
+            { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 14", price: "฿139" },
+            { image: "/User Interface/Ex.image/Ex3.png", title: "Infinity Heroes Volume 15", price: "฿149" },
+            { image: "/User Interface/Ex.image/Ex4.png", title: "Infinity Heroes Volume 16", price: "฿159" },
+            { image: "/User Interface/Ex.image/Ex5.png", title: "Infinity Heroes Volume 17", price: "฿169" },
+            { image: "/User Interface/Ex.image/Ex6.png", title: "Infinity Heroes Volume 18", price: "฿179" },
+            { image: "/User Interface/Ex.image/Ex1.png", title: "Infinity Heroes Volume 19", price: "฿189" },
+            { image: "/User Interface/Ex.image/Ex2.png", title: "Infinity Heroes Volume 20", price: "฿199" },
 ];
 
 function displayProducts(page) {
@@ -128,4 +128,5 @@ function toggleDropdown() {
       productGrid.appendChild(productDiv);
     }
   }
+  
   
