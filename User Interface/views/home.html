@@ -42,8 +42,10 @@
                 </div>
             </div>
             <div class="nav-right d-flex justify-content-center" style="flex: 1;">
-                <a href="/User Interface/views/basket_page_notlogin.html" class="me-3 text-black fs-5"><i class="bi bi-basket3"></i></a>
-                <a href="/User Interface/views/account_page_notlogin.html" class="text-black fs-5"><i class="bi bi-person"></i></a>
+                <a href="/User Interface/views/basket_page_notlogin.html" class="me-3 text-black fs-5"><i
+                        class="bi bi-basket3"></i></a>
+                <a href="/User Interface/views/account_page_notlogin.html" class="text-black fs-5"><i
+                        class="bi bi-person"></i></a>
             </div>
         </div>
     </nav>
@@ -116,80 +118,7 @@
                     <a href="/User Interface/views/Today_Deal.html" class="ms-auto" style="color: #ff4500;">See All</a>
                 </div>
                 <div id="todayDealCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner text-center">
-                        <!-- Slide 1 -->
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex1.png" class="img-fluid mx-auto d-block"
-                                        alt="Infinity Heroes Volume 01">
-                                    <a href="#" class="product-name text-start d-block">Infinity Heroes Volume 01</a>
-                                    <p class="product-price">฿129</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex2.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 2">
-                                    <a href="#" class="product-name text-start d-block">Product 2 Name</a>
-                                    <p class="product-price">฿150</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex3.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 3">
-                                    <a href="#" class="product-name text-start d-block">Product 3 Name</a>
-                                    <p class="product-price">฿99</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex4.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 4">
-                                    <a href="#" class="product-name text-start d-block">Product 4 Name</a>
-                                    <p class="product-price">฿120</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex5.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 5">
-                                    <a href="#" class="product-name text-start d-block">Product 5 Name</a>
-                                    <p class="product-price">฿140</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex6.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 6">
-                                    <a href="#" class="product-name text-start d-block">Product 6 Name</a>
-                                    <p class="product-price">฿200</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex1.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 7">
-                                    <a href="#" class="product-name text-start d-block">Product 7 Name</a>
-                                    <p class="product-price">฿250</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex2.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 8">
-                                    <a href="#" class="product-name text-start d-block">Product 8 Name</a>
-                                    <p class="product-price">฿180</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex3.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 9">
-                                    <a href="#" class="product-name text-start d-block">Product 9 Name</a>
-                                    <p class="product-price">฿175</p>
-                                </div>
-                                <div class="col-6 col-sm-4 col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex4.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 10">
-                                    <a href="#" class="product-name text-start d-block">Product 10 Name</a>
-                                    <p class="product-price">฿195</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <div class="product-grid" id="today-deal-grid"></div>
                     <!-- Carousel Controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#todayDealCarousel"
                         data-bs-slide="prev">
@@ -214,80 +143,7 @@
                     <a href="/User Interface/views/Best_Seller.html" class="ms-auto" style="color: #ff4500;">See All</a>
                 </div>
                 <div id="best-sellerCarousel" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner text-center">
-                        <!-- Slide 1 -->
-                        <div class="carousel-item active">
-                            <div class="row justify-content-center">
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex1.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 1">
-                                    <a href="#" class="product-name text-start d-block">Infinity Heroes Volume 01</a>
-                                    <p class="product-price">฿129</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex2.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 2">
-                                    <a href="#" class="product-name text-start d-block">Product 2 Name</a>
-                                    <p class="product-price">฿150</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex3.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 3">
-                                    <a href="#" class="product-name text-start d-block">Product 3 Name</a>
-                                    <p class="product-price">฿99</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex4.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 4">
-                                    <a href="#" class="product-name text-start d-block">Product 4 Name</a>
-                                    <p class="product-price">฿120</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex5.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 5">
-                                    <a href="#" class="product-name text-start d-block">Product 5 Name</a>
-                                    <p class="product-price">฿140</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Slide 2 -->
-                        <div class="carousel-item">
-                            <div class="row justify-content-center">
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex6.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 6">
-                                    <a href="#" class="product-name text-start d-block">Product 6 Name</a>
-                                    <p class="product-price">฿200</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex1.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 7">
-                                    <a href="#" class="product-name text-start d-block">Product 7 Name</a>
-                                    <p class="product-price">฿250</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex2.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 8">
-                                    <a href="#" class="product-name text-start d-block">Product 8 Name</a>
-                                    <p class="product-price">฿180</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex3.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 9">
-                                    <a href="#" class="product-name text-start d-block">Product 9 Name</a>
-                                    <p class="product-price">฿175</p>
-                                </div>
-                                <div class="col-md-2">
-                                    <img src="/User Interface/assets/Ex.image/Ex4.png" class="img-fluid mx-auto d-block"
-                                        alt="Product 10">
-                                    <a href="#" class="product-name text-start d-block">Product 10 Name</a>
-                                    <p class="product-price">฿195</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <div class="product-grid" id="best-seller-grid"></div>
                     <!-- Carousel Controls -->
                     <button class="carousel-control-prev" type="button" data-bs-target="#best-sellerCarousel"
                         data-bs-slide="prev">
