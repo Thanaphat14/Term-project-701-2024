@@ -1,0 +1,363 @@
+/* General Styles */
+.top-bar,
+header,
+.navbar {
+    background-color: #FFD700 !important;
+}
+
+.top-bar {
+    padding: 8px 20px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 15px;
+}
+
+.top-bar a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+    margin-left: 20px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.nav-left,
+.nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Search Bar */
+.nav-center {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 500px;
+    max-width: 100%;
+}
+
+#search-button {
+    background-color: #E63946;
+    color: #fff !important;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #1E90FF;
+}
+
+/* Icons (Cart & Account) */
+.nav-right {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-right a {
+    font-size: 20px;
+    color: black;
+    transition: color 0.3s;
+}
+
+.nav-right a:hover {
+    color: #E63946 !important;
+}
+
+/* Secondary Navbar */
+#secondary-nav {
+    background-color: #FFD700;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#secondary-nav .header-content {
+    display: flex;
+    justify-content: center;
+}
+
+#secondary-nav nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#secondary-nav nav ul li {
+    display: inline-block;
+}
+
+#secondary-nav nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+#secondary-nav nav ul li a:hover {
+    color: #E63946;
+    text-shadow: 1px 1px 3px #FFD700;
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0;
+    font-size: 16px;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+
+footer h4 {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 5px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFD700;
+}
+
+.social-icons li a i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+.breadcrumb span {
+    font-weight: bold;
+    color: #000;
+    margin-left: 10px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Title */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #000000;
+}
+
+/* Filter */
+.filter {
+    position: relative;
+    width: 200px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.filter label {
+    font-weight: bold;
+    color: #cecece;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.filter .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.filter .dropdown div {
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.filter .dropdown div:hover {
+    background: #cecece;
+}
+
+/* Account Section Styles */
+.account-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+.account-card {
+    display: flex;
+    flex-direction: column;
+    md:flex-row;
+    background-color: white;
+    padding: 24px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 960px;
+}
+
+.account-sidebar { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    md:items-start;
+    margin-right: 32px;
+    margin-bottom: 24px;
+}
+
+.profile-picture {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.profile-picture i {
+    font-size: 4rem;
+    color: #000000;
+}
+
+.account-membership {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.account-logout {
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.account-logout:hover {
+    background-color: #c0303d;
+}
+
+.account-content {
+    flex: 1;
+}
+
+.account-title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.account-details {
+    border: 1px solid #ddd;
+    padding: 24px;
+    border-radius: 8px;
+}
+
+.account-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.account-details-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.account-edit {
+    color: #007bff; 
+    text-decoration: none;
+}
+
+.account-edit:hover {
+    text-decoration: underline;
+}
+
+.account-info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.account-info-label {
+    font-weight: 500;
+}
+
+.text-red-500 {
+    text-decoration: underline;
+}
