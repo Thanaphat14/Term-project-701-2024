@@ -1,0 +1,212 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/User Interface/assets/css/Page_styles.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Google Maps API -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+        function initMap() {
+            var location = { lat: 13.7563, lng: 100.5018 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 14,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map,
+                title: 'B Store'
+            });
+        }
+    </script>
+</head>
+
+<body class="bg-gray-100 text-gray-800" onload="initMap()">
+    <!-- Top Bar (Login/Signup) -->
+    <div class="top-bar">
+        <a href="/User Interface/views/login_page.html" class="login-link">Log in</a>
+        <a href="/User Interface/views/Signup_page.html" class="signup-link">Sign Up</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning p-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="nav-left d-flex justify-content-center" style="flex: 1;">
+                <a class="navbar-brand fw-bold" href="/User Interface/views/home.html">B Store</a>
+            </div>
+            <div class="nav-center d-flex justify-content-center" style="flex: 2;">
+                <div class="input-group search-bar">
+                    <input type="search" class="form-control custom-search-input" placeholder="Search books...">
+                    <button id="search-button" type="submit" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+            <div class="nav-right d-flex justify-content-center" style="flex: 1;">
+                <a href="/User Interface/views/basket_page_notlogin.html" class="me-3 text-black fs-5"><i class="bi bi-basket3"></i></a>
+                <a href="/User Interface/views/account_page_notlogin.html" class="text-black fs-5"><i class="bi bi-person"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secondary Navigation (Categories) -->
+    <header id="secondary-nav">
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="/User Interface/views/home.html">Home</a></li>
+                    <li><a href="/User Interface/views/Today_Deal.html">Today Deal</a></li>
+                    <li><a href="/User Interface/views/Best_Seller.html">Best Seller</a></li>
+                    <li><a href="/User Interface/views/New_Arrival.html">New Arrival</a></li>
+                    <li><a href="/User Interface/views/Recommend.html">Recommend</a></li>
+                    <li><a href="/User Interface/views/Poetry.html">Poetry</a></li>
+                    <li><a href="/User Interface/views/Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="title">
+            <div class="breadcrumb">
+                <a href="/User Interface/views/home.html">Home</a>
+                <span>&gt;</span>
+                <a href="/User Interface/views/Contact.html"><span>Contact</span></a>
+            </div>
+            <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 100px;">Contact</h1>
+        </div>
+
+        <div class="row">
+            <!-- Contact Details -->
+            <div class="col-md-6 mb-4">
+                <h2 class="text-blue-600 text-xl font-bold mb-4" style="color: #1e90ff;">Contact Details</h2>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-envelope text-2xl me-3"></i>
+                    <span>example@gmail.com</span>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-phone text-2xl me-3"></i>
+                    <span>088-xxx-xxxx</span>
+                </div>
+                <h2 class="text-blue-600 text-xl font-bold mb-4" style="color: #1e90ff;">Social Media</h2>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fab fa-facebook text-2xl me-3"></i>
+                    <span>B Store Shop</span>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fab fa-instagram text-2xl me-3"></i>
+                    <span>B Store Shop</span>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fab fa-line text-2xl me-3"></i>
+                    <span>@bstoreshop</span>
+                </div>
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fab fa-twitter text-2xl me-3"></i>
+                    <span>@BStoreShop</span>
+                </div>
+            </div>
+        
+            <!-- Contact Form -->
+            <div class="col-md-6">
+                <h2 class="text-2xl font-bold mb-4" style="text-align: center;">Get in Touch</h2>
+                <form class="space-y-4">
+                    <div>
+                        <label class="block font-semibold" for="name">Name</label>
+                        <input class="form-control border-2 p-2 rounded-md" id="name" name="name" placeholder="Name" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block font-semibold" for="email">Email</label>
+                        <input class="form-control border-2 p-2 rounded-md" id="email" name="email" placeholder="example@gmail.com" type="email"/>
+                    </div>
+                    <div>
+                        <label class="block font-semibold" for="topic">Topic</label>
+                        <input class="form-control border-2 p-2 rounded-md" id="topic" name="topic" placeholder="Topic" type="text"/>
+                    </div>
+                    <div>
+                        <label class="block font-semibold" for="message">Message</label>
+                        <textarea class="form-control border-2 p-2 rounded-md h-32" id="message" name="message" placeholder="Message"></textarea>
+                    </div>
+                    <button class="btn btn-danger w-100 px-4 py-2 mt-3" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        
+        
+        <!-- Map Section -->
+        <div class="mt-8">
+            <h2 class="text-blue-600 text-xl font-bold mb-4" style="margin-top: 50px; color: #1e90ff;">Map</h2>
+            <div id="map" class="w-full rounded-md" style="height: 400px; margin-bottom: 100px; margin-top: 50px;"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="/User Interface/assets/Ex.image/noBgWhite.png" alt="B Store Logo">
+                    </div>
+                    <p>B Store offers a wide selection of comics, novels, and pocketbooks directly from publishers.
+                        Guaranteed quality, excellent after-sales service!</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Category</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/User Interface/views/Today_Deal.html">Today Deal</a></li>
+                        <li><a href="/User Interface/views/Best_Seller.html">Best Seller</a></li>
+                        <li><a href="/User Interface/views/New_Arrival.html">New Arrival</a></li>
+                        <li><a href="/User Interface/views/Recommend.html">Recommend</a></li>
+                        <li><a href="/User Interface/views/Poetry.html">Poetry</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact us</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i> example@gmail.com</a>
+                        </li>
+                        <li><a href="tel:088-XXX-XXXX"><i class="fas fa-phone"></i> 088-XXX-XXXX</a></li>
+                    </ul>
+                    <p>Address</p>
+                    <address>
+                        Chiang Mai University<br>
+                        239, Huay Kaew Road, Muang District,<br>
+                        Chiang Mai Thailand, 50200
+                    </address>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow us</h4>
+                    <ul class="list-unstyled social-icons">
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> B Store Shop</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> B Store Shop</a></li>
+                        <li><a href="https://www.line.me/"><i class="fab fa-line"></i> @bstoreshop</a></li>
+                        <li><a href="https://x.com/"><i class="fab fa-twitter"></i> @BStoreShop</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 B Store All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/User Interface/models/Product.js"></script>
+</body>
+
+</html>
