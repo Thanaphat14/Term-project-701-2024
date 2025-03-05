@@ -15,6 +15,14 @@ CREATE TABLE IF NOT EXISTS tags (
     name VARCHAR(255) UNIQUE NOT NULL
 );
 
+CREATE TABLE IF NOT EXISTS admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 -- Junction table with proper cascade deletion
 CREATE TABLE IF NOT EXISTS book_tags (
     book_id INT NOT NULL,
@@ -71,3 +79,7 @@ INSERT INTO book_tags (book_id, tag_id) VALUES
 (9, 1), (9, 2), (9, 14),
 -- The Lean Startup (3 tags)
 (10, 11), (10, 17), (10, 6);
+
+-- Admin
+INSERT INTO admins (username, password, email) VALUES
+('admin', '123', 'admin@gmail.com');
