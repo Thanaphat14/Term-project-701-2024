@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Bookstore</h1>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <h2>Filter Books</h2>
+            <div id="tag-container" class="tag-container"></div>
+            <div class="filter-buttons">
+                <button onclick="applyFilters()">Apply Filters</button>
+                <button onclick="resetFilters()" class="reset-btn">Reset</button>
+            </div>
+        </div>
+
+        <!-- Add Book Section -->
+        <div class="form-card">
+            <h2>Add New Book</h2>
+            <div class="form-group">
+                <input type="text" id="book-title" placeholder="Book Title">
+            </div>
+            <div class="form-group">
+                <input type="text" id="seller" placeholder="Seller">
+            </div>
+            <div class="form-group">
+                <textarea id="description" placeholder="Description"></textarea>
+            </div>
+            <div class="price-group">
+                <input type="number" id="price" placeholder="Price" step="0.01">
+                <input type="number" id="discounted-price" placeholder="Discounted Price" step="0.01">
+            </div>
+            <button id="add-book-btn">Add Book</button>
+        </div>
+
+        <!-- Add Tag Section -->
+        <div class="form-card">
+            <h2>Tags</h2>
+            <div class="form-group">
+                <input type="text" id="tag-name" placeholder="New Tag Name">
+                <button id="add-tag-btn">Add Tag</button>
+            </div>
+            <div id="tags" class="tags-container"></div>
+        </div>
+
+        <!-- Book List -->
+        <div class="book-list">
+            <h2>Book list</h2>
+            <div id="books" class="books-grid"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

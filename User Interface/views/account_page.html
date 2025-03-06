@@ -1,0 +1,167 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/User Interface/assets/css/account.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100">
+    <!-- Top Bar (Login/Signup) -->
+    <div class="top-bar">
+        <a href="/User Interface/views/login_page.html" class="login-link">Log in</a>
+        <a href="/User Interface/views/Signup_page.html" class="signup-link">Sign Up</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning p-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="nav-left d-flex justify-content-center" style="flex: 1;">
+                <a class="navbar-brand fw-bold" href="/User Interface/views/home.html">B Store</a>
+            </div>
+            <div class="nav-center d-flex justify-content-center" style="flex: 2;">
+                <div class="input-group search-bar">
+                    <input type="search" class="form-control custom-search-input" placeholder="Search books...">
+                    <button id="search-button" type="submit" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+            <div class="nav-right d-flex justify-content-center" style="flex: 1;">
+                <a href="/User Interface/views/basket_page_notlogin.html" class="me-3 text-black fs-5"><i
+                        class="bi bi-basket3"></i></a>
+                <a href="/User Interface/views/account_page_notlogin.html" class="text-black fs-5"><i
+                        class="bi bi-person"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Secondary Navigation (Categories) -->
+    <header id="secondary-nav">
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="/User Interface/views/home.html">Home</a></li>
+                    <li><a href="/User Interface/views/Today_Deal.html">Today Deal</a></li>
+                    <li><a href="/User Interface/views/Best_Seller.html">Best Seller</a></li>
+                    <li><a href="/User Interface/views/New_Arrival.html">New Arrival</a></li>
+                    <li><a href="/User Interface/views/Recommend.html">Recommend</a></li>
+                    <li><a href="/User Interface/views/Poetry.html">Poetry</a></li>
+                    <li><a href="/User Interface/views/Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="p-8">
+        <div class="max-w-4xl mx-auto flex items-start space-x-8">
+            <div class="flex flex-col items-center">
+                <img alt="User profile picture" class="rounded-full" height="100"
+                    src="https://storage.googleapis.com/a1aa/image/qnNjzFOWJJ8HJrVc1kjU9fGdrh-CVztrDQJ0h4uCiTk.jpg"
+                    width="100" />
+                <p class="mt-4">Membership</p>
+                <button class="mt-4 bg-red-500 text-white px-4 py-2 rounded-full">
+                    Log out
+                </button>
+            </div>
+            <div class="flex-1 ml-8">
+                <h2 class="text-2xl font-bold">Account</h2>
+                <div class="mt-8 border border-black rounded-lg p-4 bg-white">
+                    <div class="flex justify-between items-center border-b border-black pb-2 mb-2">
+                        <h3 class="font-bold">Membership Account</h3>
+                        <a class="text-red-500" href="edit_account.html">Edit info</a>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="data-item flex justify-between">
+                            <label for="username">Username </span>
+                            <span id="username">dasctjyjlulu </span>
+                        </div>
+                        <div class="data-item flex justify-between">
+                            <label for="email">Email</span>
+                            <span id="email">example@gmail.com </span>
+                        </div>
+                        <div class="data-item flex justify-between">
+                            <label for="name">Name-Surname</label>
+                            <span id="name">John Din</span>
+                        </div>
+                        <div class="data-item flex justify-between">
+                            <label for="gender">Gender</label>
+                            <span id="gender">Unidentified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="/User Interface/assets/Ex.image/noBgWhite.png" alt="B Store Logo">
+                    </div>
+                    <p>B Store offers a wide selection of comics, novels, and pocketbooks directly from publishers.
+                        Guaranteed quality, excellent after-sales service!</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Category</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Today Deal</a></li>
+                        <li><a href="#">Best Seller</a></li>
+                        <li><a href="#">New Arrival</a></li>
+                        <li><a href="#">Recommend</a></li>
+                        <li><a href="/User Interface/views/Poetry.html">Poetry</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact us</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i> example@gmail.com</a>
+                        </li>
+                        <li><a href="tel:088-XXX-XXXX"><i class="fas fa-phone"></i> 088-XXX-XXXX</a></li>
+                    </ul>
+                    <p>Address</p>
+                    <address>
+                        Chiang Mai University<br>
+                        239, Huay Kaew Road, Muang District,<br>
+                        Chiang Mai Thailand, 50200
+                    </address>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow us</h4>
+                    <ul class="list-unstyled social-icons">
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> B Store Shop</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> B Store Shop</a></li>
+                        <li><a href="https://www.line.me/"><i class="fab fa-line"></i> @bstoreshop</a></li>
+                        <li><a href="https://x.com/"><i class="fab fa-twitter"></i> @BStoreShop</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 B Store All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

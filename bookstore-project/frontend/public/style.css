@@ -1,0 +1,228 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.form-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+.price-group {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.filter-section {
+    margin-bottom: 30px;
+}
+
+#tag-filter {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 10px;
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.book-card {
+    background: white;
+    display: flex; 
+    align-items: flex-start; 
+    gap: 15px; 
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.book-image {
+    width: 40%;
+    height: auto; 
+    object-fit: cover; 
+    border-radius: 4px;
+}
+
+.book-card-content {
+    width: 60%; 
+}
+
+.book-card h3 {
+    margin: 0 0 10px 0;
+    color: #3498db;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.tag-card {
+    background: #ecf0f1;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.tag-card button {
+    background: #e74c3c;
+    padding: 3px 8px;
+    font-size: 0.8em;
+}
+
+.tag-card button:hover {
+    background: #c0392b;
+}
+
+del {
+    color: #e74c3c;
+    margin-left: 5px;
+}
+
+.error-message {
+    color: #e74c3c;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    background: #fadbd8;
+}
+
+button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.reset-btn {
+    background-color: #95a5a6 !important;
+}
+
+.reset-btn:hover {
+    background-color: #7f8c8d !important;
+}
+
+select[multiple] {
+    min-height: 100px;
+    padding: 8px;
+}
+
+select[multiple] option {
+    padding: 8px;
+    margin: 2px;
+    border-radius: 4px;
+}
+
+select[multiple] option:hover {
+    background-color: #3498db;
+    color: white;
+}
+
+select[multiple] option:checked {
+    background-color: #2980b9;
+    color: white;
+}
+
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.filter-tag {
+    background: #ecf0f1;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+    border: 2px solid transparent;
+}
+
+.filter-tag:hover {
+    background: #d0d8db;
+}
+
+.filter-tag.selected {
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+.filter-tag.selected::after {
+    content: " ×";
+    opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+    .price-group {
+        grid-template-columns: 1fr;
+    }
+    
+    .books-grid {
+        grid-template-columns: 1fr;
+    }
+}

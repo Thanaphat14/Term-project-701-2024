@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B Store</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/User Interface/assets/css/Page_styles.css">
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <!-- Top Bar (Login/Signup) -->
+    <div class="top-bar">
+        <a href="/User Interface/views/login_page.html" class="login-link">Log in</a>
+        <a href="/User Interface/views/Signup_page.html" class="signup-link">Sign Up</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-warning p-3">
+        <div class="container-fluid d-flex align-items-center justify-content-between">
+            <div class="nav-left d-flex justify-content-center" style="flex: 1;">
+                <a class="navbar-brand fw-bold" href="/User Interface/views/home.html">B Store</a>
+            </div>
+            <div class="nav-center d-flex justify-content-center" style="flex: 2;">
+                <div class="input-group search-bar">
+                    <input type="search" class="form-control custom-search-input" placeholder="Search books...">
+                    <button id="search-button" type="submit" class="btn btn-danger">Search</button>
+                </div>
+            </div>
+            <div class="nav-right d-flex justify-content-center" style="flex: 1;">
+                <a href="/User Interface/views/basket_page_notlogin.html" class="me-3 text-black fs-5"><i class="bi bi-basket3"></i></a>
+                <a href="/User Interface/views/account_page_notlogin.html" class="text-black fs-5"><i class="bi bi-person"></i></a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Secondary Navigation (Categories) -->
+    <header id="secondary-nav">
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="/User Interface/views/home.html">Home</a></li>
+                    <li><a href="/User Interface/views/Today_Deal.html">Today Deal</a></li>
+                    <li><a href="/User Interface/views/Best_Seller.html">Best Seller</a></li>
+                    <li><a href="/User Interface/views/New_Arrival.html">New Arrival</a></li>
+                    <li><a href="/User Interface/views/Recommend.html">Recommend</a></li>
+                    <li><a href="/User Interface/views/Poetry.html">Poetry</a></li>
+                    <li><a href="/User Interface/views/Contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Today Deal Section -->
+    <div class="container">
+
+        <div class="title">
+            <div class="breadcrumb">
+                <a href="/User Interface/views/home.html">Home</a>
+                <span>&gt;</span>
+                <a href="/User Interface/views/Best_Seller.html"><span>Best Seller</span></a>
+            </div>
+            <h1>Best Seller</h1>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter">
+            <label onclick="toggleDropdown()">Filter:</label>
+            <div class="dropdown" id="dropdown">
+                <div onclick="sortProducts('az')">A-Z</div>
+                <div onclick="sortProducts('za')">Z-A</div>
+            </div>
+        </div>
+
+        <!-- Product Section -->
+        <div class="product-grid" id="product-grid"></div>
+
+        <!-- Pagination Section -->
+        <div class="pagination">
+            <button id="prev-page" disabled onclick="changePage(-1)">&lt;</button>
+            <div id="page-numbers"></div>
+            <button id="next-page" onclick="changePage(1)">&gt;</button>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="footer-logo">
+                        <img src="/User Interface/assets/Ex.image/noBgWhite.png" alt="B Store Logo">
+                    </div>
+                    <p>B Store offers a wide selection of comics, novels, and pocketbooks directly from publishers.
+                        Guaranteed quality, excellent after-sales service!</p>
+                </div>
+                <div class="col-md-3">
+                    <h4>Category</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="/User Interface/views/Today_Deal.html">Today Deal</a></li>
+                        <li><a href="/User Interface/views/Best_Seller.html">Best Seller</a></li>
+                        <li><a href="/User Interface/views/New_Arrival.html">New Arrival</a></li>
+                        <li><a href="/User Interface/views/Recommend.html">Recommend</a></li>
+                        <li><a href="/User Interface/views/Poetry.html">Poetry</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4>Contact us</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="mailto:example@gmail.com"><i class="fas fa-envelope"></i> example@gmail.com</a>
+                        </li>
+                        <li><a href="tel:088-XXX-XXXX"><i class="fas fa-phone"></i> 088-XXX-XXXX</a></li>
+                    </ul>
+                    <p>Address</p>
+                    <address>
+                        Chiang Mai University<br>
+                        239, Huay Kaew Road, Muang District,<br>
+                        Chiang Mai Thailand, 50200
+                    </address>
+                </div>
+                <div class="col-md-3">
+                    <h4>Follow us</h4>
+                    <ul class="list-unstyled social-icons">
+                        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i> B Store Shop</a></li>
+                        <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> B Store Shop</a></li>
+                        <li><a href="https://www.line.me/"><i class="fab fa-line"></i> @bstoreshop</a></li>
+                        <li><a href="https://x.com/"><i class="fab fa-twitter"></i> @BStoreShop</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;2025 B Store All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="/User Interface/models/Product.js"></script>
+</body>
+
+</html>
